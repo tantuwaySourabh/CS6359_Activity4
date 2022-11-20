@@ -8,18 +8,10 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.jupiter.api.Test;
 
-
 public class AvgUTest {
-
 
     Average obj = new Average();
     int[] list = {5, 7, 4, 8, 6};
-    @Before
-    public void setUp() {
-
-         list = new int[]{5, 7, 4, 8, 6};
-    }
-
 
     @Test
     public void testGreaterk() {
@@ -31,6 +23,7 @@ public class AvgUTest {
         int output = obj.average(4,list);
         assertEquals(6, output);
     }
+
 
     @Test
     public void testZerok() {
@@ -50,19 +43,14 @@ public class AvgUTest {
     }
 
     @Test
-    public void testkMax() {
+    public void testkMax() { // boundary test case
         int output = obj.average(Integer.MAX_VALUE, new int[]{});
         assertEquals(0, output);
     }
 
     @Test
-    public void testkMin() {
+    public void testkMin() {  //boundary test case
         int output = obj.average(Integer.MIN_VALUE, new int[]{});
         assertEquals(0, output);
     }
-
-
-
-
-
 }
